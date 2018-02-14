@@ -1,0 +1,43 @@
+#! /usr/bin/env python3
+import random
+import sys
+def get_mac():
+	Maclist = []
+	for i in range(1,7):
+	    RANDSTR = "".join(random.sample("0123456789abcdef",2))
+	    Maclist.append(RANDSTR)
+	RANDMAC = ":".join(Maclist)
+	return RANDMAC
+def main():
+	list_two = "ens4"
+	mac = get_mac()
+
+	gpus = sys.argv
+	if len(gpus)==2:
+		if gpus[1]=="--help" or gpus[1]=="-h":
+			print("change_mac 1.1.0 - no active project")
+			print("")
+			print("Effect:")
+			print("   show change mac Sentence")
+			print("")
+			print("Usage:")
+			print("   change_mac [mac]")
+			print("   the mac default is ens4")
+			print("")
+			print("")
+			print("")
+			return 0
+		else:
+			list_two = gpus[1]
+	print("")
+	print("")
+	print("sudo ifconfig %s down"%list_two)
+	print("sudo ifconfig "+list_two+" hw ether %s"%mac)
+	print("sudo ifconfig %s up"%list_two)
+	print("")
+	print("")
+	print("")
+	return 0
+
+if __name__ == '__main__':
+	main()

@@ -1,0 +1,11 @@
+#! /usr/bin/env python3
+import os
+import sys
+os.system('clear')
+folder = sys.path[0]+"/data/help.log"
+folder = folder.replace("//","/")
+f = open(folder,'r')
+for i in f.readlines():
+	print(i.replace("\n",""))
+f.close()
+

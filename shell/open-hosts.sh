@@ -1,0 +1,1 @@
+sudo gedit /etc/hosts
