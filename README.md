@@ -17,14 +17,14 @@
   │  └── update-path    获取更新path文件命令
   │
   ├─ 修改类
-  │ └── change-mac    生成修改mac命令
+  │  └── change-mac    生成修改mac命令
   │
   └─ Hacker类
-       └── java rand_shenfen 随机生成身份信息
+     └── java rand_shenfen 随机生成身份信息
 
 tools_other
   └─ baota
-       └──install.sh    宝塔面板一键安装程序
+     └──install.sh    宝塔面板一键安装程序
 
 folders （自用）
   ├─ open-angular.sh    打开angular项目
